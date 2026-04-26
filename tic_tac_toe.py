@@ -58,7 +58,7 @@ class TicTacToe(gym.Env):
         places =[[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6] ]
         for place in places:
             if self.board[place[0]] == self.board[place[1]] == self.board[place[2]] != 0:
-                # if 1, agent wins, 0 opponent wins
+                # if 1, agent wins, -1 opponent wins
                 return True, (1 if self.board[place[0]] == 1 else -1)    
     
         if 0 not in self.board:
